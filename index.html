@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thivisha S G | Ultra Portfolio</title>
+
+<style>
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  background: linear-gradient(135deg,#fdfbfb,#e0c3fc,#8ec5fc);
+  background-size:300% 300%;
+  animation:gradient 10s infinite;
+  color:#1e293b;
+  transition:0.5s;
+}
+
+body.dark {
+  background:#0f172a;
+  color:white;
+}
+
+@keyframes gradient {
+  0%{background-position:0%}
+  50%{background-position:100%}
+  100%{background-position:0%}
+}
+
+/* CURSOR */
+.cursor {
+  width:20px;
+  height:20px;
+  background:#ec4899;
+  position:fixed;
+  border-radius:50%;
+  pointer-events:none;
+  filter:blur(8px);
+  z-index:9999;
+}
+
+/* NAV */
+nav {
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:15px;
+  backdrop-filter:blur(10px);
+}
+
+nav a {
+  text-decoration:none;
+  font-weight:bold;
+  color:#2563eb;
+}
+
+/* TOGGLE */
+.toggle {
+  position:fixed;
+  right:20px;
+  top:15px;
+  cursor:pointer;
+  background:#6366f1;
+  color:white;
+  padding:6px 12px;
+  border-radius:8px;
+}
+
+/* HEADER */
+header {
+  text-align:center;
+  padding:120px 20px;
+}
+
+header img {
+  width:160px;
+  height:160px;
+  border-radius:20px;
+  object-fit:cover;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin-top:15px;
+}
+
+header p {
+  margin-top:8px;
+  font-size:18px;
+}
+
+/* SECTION */
+section {
+  max-width:900px;
+  margin:auto;
+  padding:50px 20px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.7s;
+}
+
+section.show {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* CARD */
+.card {
+  background:rgba(255,255,255,0.4);
+  backdrop-filter:blur(10px);
+  padding:20px;
+  border-radius:15px;
+  margin:20px 0;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-8px);
+}
+
+/* BUTTON */
+.btn {
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 15px;
+  border-radius:6px;
+  color:white;
+  text-decoration:none;
+  background:linear-gradient(45deg,#6366f1,#ec4899);
+}
+
+/* SKILLS */
+.skills {
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.skills div {
+  padding:12px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#a5b4fc,#f9a8d4);
+  text-align:center;
+  min-width:140px;
+  transition:0.3s;
+}
+
+.skills div:hover {
+  transform:scale(1.08);
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* PROJECT */
+.project {
+  border-left:4px solid #6366f1;
+  padding-left:10px;
+}
+
+/* POPUP */
+.popup {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+
+.popup iframe {
+  width:80%;
+  height:80%;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="cursor"></div>
+<div class="toggle" onclick="toggleMode()">🌙 Mode</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#certificates">Certificates</a>
+<a href="#profiles">Profiles</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<header>
+<img src="thivi2.jpg">
+<h1>Thivisha S G</h1>
+<p>B.E Electronics and Communication Engineering Student 🎓</p>
+<p>Karpagam College of Engineering</p>
+</header>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+<p>Hello, I'm <strong>Thivisha S G</strong>, an Electronics and Communication Engineering student at <strong>Karpagam College of Engineering</strong>.</p>
+
+<p>I have a strong interest in software development and problem-solving, with knowledge in C, C++, Java, Python, and JavaScript.</p>
+
+<p>I have hands-on experience in web development and a growing understanding of Embedded Systems and IoT, allowing me to explore both software and hardware-based solutions.</p>
+
+<p>I enjoy building clean, efficient, and user-focused projects while continuously learning and improving my technical skills.</p>
+
+<p>Beyond technology, I am also passionate about creative design and handcrafts, which adds a creative perspective to my work.</p>
+</div>
+
+<section id="skills">
+<h2>🛠️ Skills</h2>
+<div class="card">
+<p>💻 C, C++, Python, Java, HTML, CSS</p>
+<p>🔌 Embedded Systems & IoT</p>
+<p>🎨 Creative Design</p>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="card project">
+<h3>Mini Quiz Website</h3>
+<p>Interactive quiz with difficulty levels.</p>
+</div>
+</section>
+
+<section id="certificates">
+<h2>Certificates</h2>
+
+<div class="card">
+<h3>Python Programming</h3>
+<button class="btn" onclick="openCert('python-certificate.jpg')">View</button>
+</div>
+
+<div class="card">
+<h3>Java Programming</h3>
+<button class="btn" onclick="openCert('java-certificate.jpg')">View</button>
+</div>
+
+<div class="card">
+<h3>Embedded Systems with IoT</h3>
+<button class="btn" onclick="openCert('embedded-certificate.jpg')">View</button>
+</div>
+
+<div class="card">
+<h3>C Programming</h3>
+<button class="btn" onclick="openCert('c-certificate.jpg')">View</button>
+</div>
+
+<div class="card">
+<h3>C++ Programming</h3>
+<button class="btn" onclick="openCert('c++-certificate.jpg')">View</button>
+</div>
+
+<div class="card">
+<h3>Hackathon Certificate</h3>
+<button class="btn" onclick="openCert('hackathon-certificate.jpg')">View</button>
+</div>
+
+</section>
+
+<section id="profiles">
+<h2>💻 Coding Profiles</h2>
+
+<div class="card">
+<div class="skills">
+
+<div>
+<p>🏆 CodeGalatta</p>
+<a href="https://www.codegalatta.com/profile" target="_blank" class="btn">Visit</a>
+</div>
+
+<div>
+<p>🍽️ CodeChef</p>
+<a href="https://www.codechef.com/users/thivisaran_26" target="_blank" class="btn">Visit</a>
+</div>
+
+<div>
+<p>📘 GeeksforGeeks</p>
+<a href="https://www.geeksforgeeks.org/profile/thivishtlue" target="_blank" class="btn">Visit</a>
+</div>
+
+<div>
+<p>🔥 LeetCode</p>
+<a href="https://leetcode.com/u/Thivisaran/" target="_blank" class="btn">Visit</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+<p>Email: thivishasaran@gmail.com</p>
+<p><a href="https://www.linkedin.com" target="_blank">LinkedIn Profile</a></p>
+</div>
+</section>
+
+<footer>
+<p>©️ 2026 Thivisha Saran</p>
+</footer>
+
+<div class="popup" id="popup" onclick="closeCert()">
+<iframe id="frame"></iframe>
+</div>
+
+<script>
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", ()=>{
+  sections.forEach(sec=>{
+    if(sec.getBoundingClientRect().top < window.innerHeight-100){
+      sec.classList.add("show");
+    }
+  });
+});
+
+function toggleMode(){
+  document.body.classList.toggle("dark");
+}
+
+const cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", e=>{
+  cursor.style.top = e.clientY+"px";
+  cursor.style.left = e.clientX+"px";
+});
+
+function openCert(file){
+  document.getElementById("popup").style.display="flex";
+  document.getElementById("frame").src=file;
+}
+
+function closeCert(){
+  document.getElementById("popup").style.display="none";
+}
+</script>
+
+</body>
+</html>
